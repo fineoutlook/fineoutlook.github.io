@@ -24,6 +24,24 @@ jekyll server
 sass --watch sass/oasis.scss:oasis.css
 ```
 
+## Install with [rvm](https://rvm.io/rvm/install)
+
+```
+rvm install 2.5
+rvm gemset create oasis
+rvm gemset use oasis
+cd codrops-oasis/
+gem install bundler jekyll
+bundle install
+jekyll server
+```
+
+In another terminal window:
+```
+npm install sass
+./node_modules/.bin/sass --watch sass/oasis.scss:oasis.css
+```
+
 ## Credits
 
 * [Google Fonts - Open Sans, Fjalla One](https://fonts.google.com)

@@ -38,7 +38,7 @@ body {
 body {
   min-height: 100%;
   font-family: "Open Sans", sans-serif;
-  background-color: #27253f;
+  background-color: black;
   color: white;
   font-weight: 300;
   overflow-x: hidden; }
@@ -47,6 +47,13 @@ img {
   max-width: 100%;
   width: 100%;
   display: block; }
+
+img.logo {
+  display: block;
+  max-width: 100px; 
+  width: auto;
+  height: auto;
+}
 
 p {
   margin: 0;
@@ -80,23 +87,23 @@ nav {
       opacity: 0;
       content: "";
       height: 2px;
-      background-color: #c0b2fc; }
+      background-color: white; }
     nav a:hover {
-      color: #c0b2fc; }
+      color: gray; }
       nav a:hover:before {
         transition: 0.5s all ease;
         left: 0;
         right: 0;
         opacity: 1; }
     nav a.selected {
-      color: #c0b2fc; }
+      color: gray; }
   nav.fixed {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 100;
-    background-color: #27263ff2;
+    background-color: black;
     transition: 0.3s; }
 
 .nav--mobile {
@@ -107,7 +114,7 @@ nav {
   padding: 0.5rem;
   width: 25px;
   height: 25px;
-  background-color: #38355a;
+  background-color: black;
   text-align: right;
   font-size: 1rem;
   position: fixed;
@@ -202,14 +209,13 @@ section {
   .section--summary:after {
     content: "";
     left: -1440px;
-    background: url(images/lines.svg) repeat-x;
+    background: black;
     height: 406px;
     width: calc(1440px * 3);
     position: absolute;
     bottom: 0;
     right: 0;
-    z-index: -10;
-    animation: infiniteStats 120s linear infinite; }
+    z-index: -10; }
   .section--summary .summary__lists > * {
     flex: 1; }
   .section--summary .summary__list img {
@@ -249,7 +255,7 @@ section {
     align-self: flex-start;
     flex: 1; }
   .section--snippets .snippets__card {
-    border: 1px solid #6146d7;
+    border: 1px solid gray;
     border-radius: 3px;
     margin-bottom: 1rem;
     justify-content: center;
@@ -264,13 +270,14 @@ section {
   .section--snippets .snippets__title {
     margin-bottom: 1rem; }
   .section--snippets .snippets__content {
-    background-color: #6146d7;
+    color: #575757;
+    background-color: rgb(234, 234, 234);
     padding: 2rem;
     flex: 1;
     align-self: flex-start; }
   .section--snippets:before {
     position: absolute;
-    background: radial-gradient(#5d4688 0%, #efb5dd21 30%, #27253f 70%);
+    background: radial-gradient(rgb(150,150,150) 0%, black 30%, black 70%);
     content: "";
     top: 30px;
     right: -40px;
@@ -331,7 +338,7 @@ section {
   opacity: 0;
   margin: 8rem auto; }
   .section--stats .stats__block {
-    border: 1px solid #6146d7;
+    border: 1px solid rgb(60,60,60);
     border-radius: 3px;
     padding: 1rem 1rem 0 1rem;
     height: 160px;
@@ -353,13 +360,17 @@ section {
     margin-top: 0.8rem; }
 
 .section--integrations {
+  color:black;
   text-align: center;
-  padding-bottom: 3rem; }
+  padding-bottom: 3rem;
+  background-color: rgb(234,234, 234);
+  max-width: none; }
+
 
 .section--customers {
   margin: 0;
   padding: 5rem 0;
-  background-color: #f6f2fe;
+  background-color: rgb(234,234, 234);
   max-width: none; }
   .section--customers .flex--horizontal {
     width: 90%;
@@ -375,11 +386,11 @@ section {
     margin-bottom: 2rem; }
 
 .section--contact {
-  background: url("images/contact-bg.png") repeat;
+  background-color: black;
   padding: 8rem 3rem;
   margin: 0;
   max-width: none;
-  border-top: 0.5rem solid #6146d7; }
+  border-top: 0.5rem solid gray; }
   .section--contact .section__title {
     width: auto; }
 
@@ -421,13 +432,13 @@ section {
   z-index: 1; }
   .tns-controls > button {
     border: none;
-    background-color: #e8e2f3;
+    background-color: rgb(234,234,234);
     width: 40px;
     height: 40px;
-    color: #6146d7;
+    color: rgb(11,11,11);
     outline: 0; }
     .tns-controls > button:hover {
-      background-color: #6146d7;
+      background-color: rgb(60,60,60);
       color: white;
       transition: 0.3s; }
   .tns-controls > button:last-of-type {
@@ -457,12 +468,12 @@ section {
   font-size: 0.8rem;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
-  background-color: #6146d7;
+  background-color: rgb(60,60,60);
   color: white;
   width: 15%; }
 
 .cta {
-  background: #6146d7;
+  background: rgb(60,60,60);
   border-radius: 3px;
   color: white;
   font-size: 0.9rem;
@@ -479,7 +490,6 @@ section {
   .cta:after {
     position: absolute;
     content: "";
-    background-image: url(/images/apple.png);
     right: 0.5rem;
     top: 20%;
     display: block;

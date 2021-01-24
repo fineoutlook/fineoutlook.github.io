@@ -42,52 +42,52 @@ function randomArray(length, max) {
   });
 }
 
-for (var i = 0; i < 6; i++) {
-  var ctx = document.getElementById("stats-" + i).getContext("2d");
-  var type, dataType;
+// for (var i = 0; i < 6; i++) {
+//   var ctx = document.getElementById("stats-" + i).getContext("2d");
+//   var type, dataType;
 
-  if (i !== 1 && i !== 4) {
-    type = "line";
-    dataType = getGeneratedLineData(randomArray(30, 1000));
-  } else {
-    type = "bar";
-    dataType = getGeneratedBarData(randomArray(30, 1000));
-  }
+//   if (i !== 1 && i !== 4) {
+//     type = "line";
+//     dataType = getGeneratedLineData(randomArray(30, 1000));
+//   } else {
+//     type = "bar";
+//     dataType = getGeneratedBarData(randomArray(30, 1000));
+//   }
 
-  new Chart(ctx, {
-    type: type,
-    data: dataType,
-    scaleShowVerticalLines: false,
-    scaleGridLineColor: "black",
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      elements: {
-        line: {
-          tension: 0
-        }
-      },
-      legend: {
-        display: false
-      },
-      scales: {
-        yAxes: [
-          {
-            ticks: {
-              fontColor: "#444363",
-              fontSize: 12
-            }
-          }
-        ],
-        xAxes: [
-          {
-            ticks: {
-              fontColor: "#444363",
-              fontSize: 12
-            }
-          }
-        ]
-      }
-    }
-  });
-}
+//   new Chart(ctx, {
+//     type: type,
+//     data: dataType,
+//     scaleShowVerticalLines: false,
+//     scaleGridLineColor: "black",
+//     options: {
+//       responsive: true,
+//       maintainAspectRatio: false,
+//       elements: {
+//         line: {
+//           tension: 0
+//         }
+//       },
+//       legend: {
+//         display: false
+//       },
+//       scales: {
+//         yAxes: [
+//           {
+//             ticks: {
+//               fontColor: "#444363",
+//               fontSize: 12
+//             }
+//           }
+//         ],
+//         xAxes: [
+//           {
+//             ticks: {
+//               fontColor: "#444363",
+//               fontSize: 12
+//             }
+//           }
+//         ]
+//       }
+//     }
+//   });
+// }
